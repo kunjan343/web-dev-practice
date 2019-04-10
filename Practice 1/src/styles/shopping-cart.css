@@ -1,0 +1,48 @@
+.form-blocks {
+    padding: 10px;
+    background-color: dodgerblue;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.form-body {
+    margin: 5px;
+    padding: 10px;
+    background-color: aquamarine;
+    border: 4px solid black;
+}
+
+.item-list {
+    background-color: #4dffe4 !important;
+}
+
+.item-list table {
+    width: 100%;
+}
+
+.item-list-table tr th {
+    text-align: left;
+}
+
+.quantity-box {
+    width: 30px;
+}
+
+.extra-table {
+    width: 50%;
+}
+
+.billing-total {
+    position: relative;
+}
+
+.billing-table {
+    border: 2px solid black;
+    background-color: #4dffe4 !important;
+    padding: 5px;
+    margin-left: 82%;
+}
+
+.billing-table tr td input {
+    width: 65px;
+}

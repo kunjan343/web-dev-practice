@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask for Number</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var myNumber = "";
+            do {
+                myNumber = prompt("Enter number");
+            } while (isNaN(myNumber) || myNumber < 0 || myNumber > 10);
+            if (parseInt(myNumber) === 7) {
+                confirm("got it");
+            } else {
+                confirm("no good");
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

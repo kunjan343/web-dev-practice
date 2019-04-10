@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="styles/shopping-cart.css">
+    <script src="scripts/shopping-cart.js"></script>
+</head>
+<body>
+<form name="pizza-form" method="get">
+    <div class="form-body">
+        <div class="form-blocks">
+            <h1>Shopping Cart</h1>
+        </div>
+        <div class="form-blocks item-list">
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><input type="number" min="0" value="1" class="quantity-box" required></td>
+                    <td>HDTV2479 Samsung 55" HD-3D TV</td>
+                    <td>$&nbsp;<input type="number" disabled></td>
+                </tr>
+                <tr>
+                    <td><input type="number" min="0" value="1" class="quantity-box" required></td>
+                    <td>AUD20187 Samsung 5.1 Home Audio System</td>
+                    <td>$&nbsp;<input type="number" disabled></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>$&nbsp;<input type="number" disabled></td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-blocks">
+            <h2>Additional Extra</h2>
+            <table class="extra-table">
+                <tr>
+                    <td>Promo Code?</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Options:</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Standard:</td>
+                                <td><input type="radio" name="delivery" checked>$4.99</td>
+                            </tr>
+                            <tr>
+                                <td>Expedited:</td>
+                                <td><input type="radio" name="delivery">$19.99</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div>Gift Wrapping? $9.99<input type="checkbox" name="gift"></div>
+            <div>
+                <input type="checkbox">Please insure my purchase!(10% of total before taxes)
+            </div>
+            <div>
+                <input type="checkbox"><span style="background-color: white">Please sign me up for your free Membership Rewards!</span>
+            </div>
+        </div>
+        <div class="billing-total">
+            <div style="width: 100%"></div>
+            <table class="billing-table">
+                <tr>
+                    <td>Delivery:</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td>Wrapping:</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td>Insurance:</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td>Sub-Total:</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td>Tax (13%):</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td>$<input type="text" disabled></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button type="submit" onclick="submitForm()">Submit Query</button>
+            <button type="button" onclick="submitForm()">Recalculate</button>
+            <button type="reset">Reset</button>
+        </div>
+        <div id="order-status" class="order-status"></div>
+    </div>
+</form>
+</body>
+</html>
