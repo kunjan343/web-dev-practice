@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Choice</title>
+</head>
+<body>
+<div id="div-content">
+    This is div content.
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var property = "";
+        do {
+            property = prompt("which property do you want to change");
+            if (property === "") {
+                return;
+            }
+            var value = prompt("What is your property value?");
+            document.getElementById("div-content").style[property] = value;
+        } while (property !== "");
+    });
+</script>
+</body>
+</html>

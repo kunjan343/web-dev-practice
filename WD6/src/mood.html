@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var mood = prompt("Enter your mood(1-10):");
+            var img = document.getElementById("img");
+            if (mood < 3) {
+                img.src = "http://1.bp.blogspot.com/-93-XRIP5v5Y/VIfaGQhJxsI/AAAAAAAAGEc/1RzUXP8tZxY/s1600/teary+eyes.png";
+            } else if (mood < 7) {
+                img.src = "http://www.yourmomhatesthis.com/images/2016/12/Unamused-Face-Emoji-PNG.png";
+            } else {
+                img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Breathe-face-smile.svg/1200px-Breathe-face-smile.svg.png";
+            }
+        });
+    </script>
+</head>
+<body>
+<h1 id="message" class="heading">Hello, Hello</h1>
+<img id="img" src="" alt="mood" height="200" width="200"/>
+</body>
+</html>

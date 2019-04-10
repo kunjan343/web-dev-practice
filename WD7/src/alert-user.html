@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ask for Input</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var userInput = prompt("What is 23 + -4?");
+            if (isNaN(userInput)) {
+                alert("Please enter number.");
+                return;
+            }
+            if (parseInt(userInput) === 19) {
+                alert("Correct Answer");
+                return;
+            }
+            alert("Your input is incorrect");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

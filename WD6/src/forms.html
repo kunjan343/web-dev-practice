@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Example</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // alert('Hello boi\"');
+            // var fun = prompt("Enter funny word")11;
+            // confirm("Are you mad?");
+            var a = document.getElementById("t1").value;
+            console.log(a);
+            document.getElementById("t2").value = "Help me";
+            var b = document.getElementsByName("radio");
+            for (i in b) {
+                if (b[i].checked) {
+                    console.log(b[i].value);
+                }
+            }
+
+            document.getElementById("t5").style.backgroundColor = "#c2ff63";
+            document.getElementById("t2").style.fontStyle = "italic";
+        });
+    </script>
+</head>
+<body>
+<form action="" method="get" target="_blank">
+    <fieldset>
+        <legend>Basic Fields</legend>
+        First Name:&nbsp;<input type="text" id="t1" value="Kunjan" disabled/>
+        <br><br>
+        <!--type : password, email, number, submit, button, checkbox, range -->
+        Last Name:&nbsp;<input type="text" id="t2" autofocus maxlength="10" minlength="3"/>
+        <br><br>
+        Hidden:&nbsp;<input type="" id="t3" hidden/>
+        <br><br>
+        Age:&nbsp;<input type="number" id="t7" min="0" max="100" step="2"/>
+        <br><br>
+        Nationality:&nbsp;<input type="text" id="t4" placeholder="Your Nation"/>
+        <br><br>
+        Nationality:&nbsp;<input type="text" id="t5" value="Your Nation" readonly/>
+        <br><br>
+    </fieldset>
+    <input type="radio" name="radio" checked disabled value="checked">Checked button
+    <input type="radio" name="radio" value="unchecked">Radio button
+    <br>
+    <input type="checkbox" disabled>Checked button
+    <input type="checkbox" checked>Radio button
+    <br><br>
+    Comments<br>
+    <textarea id="t6" rows="3" cols="100">Hello from textarea</textarea>
+    <div>Dropdown List</div>
+    <select title="Fruits" size="2" multiple>
+        <optgroup label="Big">
+            <option>Watermelon</option>
+        </optgroup>
+        <optgroup label="Small">
+            <option selected>Banana</option>
+            <option disabled>Apple</option>
+            <option value="grapes">Grapes</option>
+        </optgroup>
+    </select>
+    <br><br>
+    <div>Datalist</div>
+    <datalist id="sports">
+        <option value="Basketball">Basketball</option>
+        <option value="baseball">Baseball</option>
+        <option value="Volleyball">Volleyball</option>
+    </datalist>
+    <input type="text" list="sports">
+    <br><br>
+    Progress:
+    <progress max="100" value="50"></progress>
+    <br><br>
+    Meter:
+    <meter max="100" value="50"></meter>
+    <br><br>
+    <input type="submit" value="Submit"/>
+    <input type="reset" value="Reset"/>
+    <input type="button" value="close"/>
+    <br><br>
+</form>
+</body>
+</html>

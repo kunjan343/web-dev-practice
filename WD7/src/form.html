@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+    <script>
+        function countSum() {
+            var num1 = document.getElementById("number1").value;
+            if (isNaN(num1)) {
+                alert("Please enter number");
+                return;
+            }
+            var num2 = document.getElementById("number2").value;
+            if (isNaN(num2)) {
+                alert("Please enter number");
+                return;
+            }
+            document.getElementById("answer-block").innerHTML = parseInt(num1) + parseInt(num2);
+        }
+    </script>
+</head>
+<body>
+First Digit : <input type="number" id="number1" name="number1">
+<br>
+Second Digit : <input type="number" id="number2" name="number1">
+<br>
+<button type="button" onclick="countSum();">Sum</button>
+<p id="answer-block"></p>
+</body>
+</html>

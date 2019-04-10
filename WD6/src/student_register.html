@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <style>
+        .button {
+            color: white;
+            border: none;
+            width: 70px;
+            height: 30px;
+        }
+
+        .button:active {
+            background-color: black !important;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <fieldset>
+        <fieldset>
+            <legend>Basic</legend>
+            First Name: <input type="text" required>
+            <br><br>
+            Last Name: <input type="text" required>
+            <br><br>
+            Email Id: <input type="email" required>
+            <br><br>
+            Age: <input type="number" min="20" max="30" required>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Academic</legend>
+            Programs:
+            <datalist id="programs">
+                <option value="Computer">Computer</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Physics">Physics</option>
+            </datalist>
+            <input type="text" list="programs" value="Computer" required>
+            <br><br>
+            Do you need parking space?($35/semester):<br>
+            <input type="radio" name="parking" value="yes">Yes
+            <input type="radio" name="parking" value="no" checked>No
+            <br><br>
+            Services you need:<br>
+            <input type="checkbox" value="library" checked>Library
+            <input type="checkbox" value="gym">Gym
+            <input type="checkbox" value="tutoring" checked>Tutoring
+            <input type="checkbox" value="learningCommons">Learning Commons
+            <input type="checkbox" value="healthPlan">Health Plan
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Extra</legend>
+            Comments:<br>
+            <textarea cols="100" rows="5"></textarea>
+        </fieldset>
+        <br>
+        <button type="reset" class="button" style="background-color: red">Clear</button>
+        <button type="submit" class="button" style="background-color: green">Submit</button>
+    </fieldset>
+</form>
+</body>
+</html>

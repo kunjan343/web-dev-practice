@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+</head>
+<body>
+<div id="para-block"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var paraCount = prompt("How many paragraph you want?");
+        if (isNaN(paraCount)) {
+            alert("Please insert number");
+            return;
+        }
+        var paraContent = prompt("What content do you want to put in your paragraph?");
+        var stringContent = "";
+        for (i = 0; i < paraCount; i++) {
+            stringContent += `<p>${paraContent}</p>`;
+        }
+        document.getElementById("para-block").innerHTML = stringContent;
+    });
+</script>
+</body>
+</html>
