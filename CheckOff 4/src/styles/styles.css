@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.company-logo {
+    position: absolute;
+    right: 24px;
+}
+
+.button {
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+}
+
+.button:active {
+    background-color: black !important;
+}
+
+.data-display {
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 24px;
+}

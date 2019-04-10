@@ -1,0 +1,39 @@
+#title {
+	font-family: Georgia;
+	font-weight: bold;
+	color: darkblue; 
+	font-size: 22pt;
+	text-align: center;
+	/* horz vert blur color */
+	/* width: 100%; */
+	}
+.outline {
+	display: block;
+	font-size: 18pt;
+	font-weight: normal;
+	margin: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 75px;
+	background-color: white;
+	border: thick solid darkblue;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 100px;
+	box-shadow: 5px 5px 10px orange, -10px -10px 20px red;
+}
+
+.subtitle {
+	font-size: 20pt;
+	font-weight: bold;
+	font-style: italic;
+}
+table {
+	font-family: Georgia;
+	border: thick solid blue;
+	margin: 15px;
+	width: 100%; 
+}
+

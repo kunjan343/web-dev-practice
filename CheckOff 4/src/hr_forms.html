@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Resource/Kunjan Patel</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+<form method="post">
+    <fieldset>
+        <legend>Contact</legend>
+        <img class="company-logo" src="https://i.pinimg.com/736x/07/db/3a/07db3a472b16c6c1166da236b4687cf7.jpg"
+             width="70" height="70">
+        <table>
+            <tr>
+                <td><label for="fName">First Name</label></td>
+                <td><input type="text" id="fName" name="fName" required maxlength="20" placeholder="your name"
+                           autofocus></td>
+            </tr>
+            <tr>
+                <td><label for="lName">Last Name</label></td>
+                <td><input type="text" id="lName" name="lName" required maxlength="20" placeholder="last name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Id</label></td>
+                <td><input type="email" id="email" name="email" required placeholder="email"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Recruitment</legend>
+        <table>
+            <tr>
+                <td><label for="experience">Years of experience</label></td>
+                <td><input type="number" id="experience" name="experience" required placeholder="experience" min="0">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="startMonth">Which month of the year you can start work</label></td>
+                <td><input type="month" id="startMonth" name="startMonth" required></td>
+            </tr>
+            <tr>
+                <td><label>Compensation structure</label></td>
+                <td>
+                    <input type="radio" name="compensation" value="SO" checked autofocus><label>Salary</label>
+                    <input type="radio" name="compensation" value="SWB"><label>Salary with Bonus</label>
+                    <input type="radio" name="compensation" value="CO"><label>Commission only</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Pick which region(s) you are willing to work</label></td>
+                <td>
+                    <input type="checkbox" name="region" value="east">East
+                    <input type="checkbox" name="region" value="west">West
+                    <input type="checkbox" name="region" value="north">North
+                    <input type="checkbox" name="region" value="south">South
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Other Information</legend>
+        <table>
+            <tr>
+                <td><label for="reference">Number of Reference</label></td>
+                <td><input type="range" id="reference" name="reference" min="1" max="5" step="1" value="1"></td>
+            </tr>
+            <tr>
+                <td><label for="comments">Comments</label></td>
+                <td><textarea id="comments" name="comments" cols="50" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <div align="right">
+        <button type="reset" id="reset" name="reset" class="button" style="background-color: red">Reset Form</button>
+        <button type="submit" id="submit" name="submit" class="button" style="background-color: green">Submit Data
+        </button>
+    </div>
+    <div class="data-display">
+        <p>This feature is still in development</p>
+    </div>
+</form>
+</body>
+</html>
