@@ -1,0 +1,136 @@
+<!-- @copyright to KUNJAN PATEL-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <style>
+        .button {
+            color: white;
+            border: none;
+            width: 100px;
+            height: 30px;
+        }
+
+        .button:active {
+            background-color: black !important;
+        }
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .copyright {
+            font-family: cursive;
+            text-align: end;
+            font-size: x-small;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    <fieldset>
+        <legend>Basic</legend>
+        <table>
+            <tr>
+                <td><label>Title</label></td>
+                <td>
+                    <input type="radio" name="title" value="Mr" checked autofocus><label>Mr.</label>
+                    <input type="radio" name="title" value="Mrs"><label>Mrs.</label>
+                    <input type="radio" name="title" value="Ms"><label>Ms.</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="fName">First Name</label></td>
+                <td><input type="text" id="fName" name="fName" required maxlength="20" placeholder="your name"></td>
+            </tr>
+            <tr>
+                <td><label for="lName">Last Name</label></td>
+                <td><input type="text" id="lName" name="lName" required maxlength="20" placeholder="last name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Id</label></td>
+                <td><input type="email" id="email" name="email" required placeholder="email"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone No.</label></td>
+                <td><input type="number" id="phone" name="phone" required pattern="[62]{1}[0-9]{9}"
+                           placeholder="phone number"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Education</legend>
+        <table>
+            <tr>
+                <td><label for="dateEnrolled">Date Enrolled</label></td>
+                <td><input type="date" id="dateEnrolled" name="dateEnrolled" required></td>
+            </tr>
+            <tr>
+                <td><label>Major</label></td>
+                <td>
+                    <div><input type="checkbox" name="major" value="business">Business Information</div>
+                    <div><input type="checkbox" name="major" value="health">Health and Medical Science</div>
+                    <div><input type="checkbox" name="major" value="computer" checked>Computer Science</div>
+                    <div><input type="checkbox" name="major" value="it">Information Technology</div>
+                    <div><input type="checkbox" name="major" value="business">Master in Business Administration</div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gpa">GPA</label></td>
+                <td><input type="range" id="gpa" name="gpa" min="0" max="4" step="0.1"></td>
+            </tr>
+            <tr>
+                <td><label for="classes">INFO Class Taken</label></td>
+                <td>
+                    <select id="classes" name="classes" multiple>
+                        <option value="10081" selected>INFO 10081</option>
+                        <option value="10082">INFO 10082</option>
+                        <option value="1049">SYST 1049</option>
+                        <option value="10199">SYST 10199</option>
+                        <option value="10689">PROG 10689</option>
+                        <option value="37721">PROG 37721</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Work</legend>
+        <table>
+            <tr>
+                <td><label>Are you Employeed?</label></td>
+                <td>
+                    <input type="radio" name="employed" value="yes">Yes
+                    <input type="radio" name="employed" value="no" checked>No
+                </td>
+            </tr>
+            <tr>
+                <td><label>If so, Full-time or Part-time?</label></td>
+                <td>
+                    <input type="radio" name="employmentType" value="fullTime">Full-Time
+                    <input type="radio" name="employmentType" value="fullTime">Pull-Time
+                </td>
+            </tr>
+            <tr>
+                <td><label for="resume">If you are interested in internships, etc., please upload your resume</label>
+                </td>
+                <td><input type="file" id="resume" name="resume"></td>
+            </tr>
+            <tr>
+                <td><label for="comments">If you have ideas of how to improve...</label></td>
+                <td><textarea id="comments" name="comments" cols="50" rows="5"></textarea></td>
+            </tr>
+        </table>
+    </fieldset>
+    <div align="right">
+        <button type="reset" id="reset" name="reset" class="button" style="background-color: red">Reset Form</button>
+        <button type="submit" id="submit" name="submit" class="button" style="background-color: green">Submit Data
+        </button>
+    </div>
+    <p class="copyright"><i>Copyright by &copy;KUNJAN_PATEL/991535676</i></p>
+</form>
+</body>
+</html>
