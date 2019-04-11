@@ -20,19 +20,21 @@
                     <th>Price</th>
                 </tr>
                 <tr>
-                    <td><input type="number" min="0" value="1" class="quantity-box" required></td>
+                    <td><input type="number" id="samsung-tv" min="1" value="1" class="quantity-box"
+                               onclick="changeTVQuantity()" required></td>
                     <td>HDTV2479 Samsung 55" HD-3D TV</td>
-                    <td>$&nbsp;<input type="number" disabled></td>
+                    <td>$&nbsp;<input type="text" id="samsung-tv-price" disabled></td>
                 </tr>
                 <tr>
-                    <td><input type="number" min="0" value="1" class="quantity-box" required></td>
+                    <td><input type="number" id="samsung-audio" min="1" value="1" class="quantity-box"
+                               onclick="changeAudioQuantity()" required></td>
                     <td>AUD20187 Samsung 5.1 Home Audio System</td>
-                    <td>$&nbsp;<input type="number" disabled></td>
+                    <td>$&nbsp;<input type="text" id="samsung-audio-price" disabled></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
-                    <td>$&nbsp;<input type="number" disabled></td>
+                    <td>$&nbsp;<input type="text" id="items-total" disabled></td>
                 </tr>
             </table>
         </div>
@@ -41,7 +43,7 @@
             <table class="extra-table">
                 <tr>
                     <td>Promo Code?</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" id="promo-code"></td>
                 </tr>
                 <tr>
                     <td>Delivery Options:</td>
@@ -52,22 +54,22 @@
                         <table>
                             <tr>
                                 <td>Standard:</td>
-                                <td><input type="radio" name="delivery" checked>$4.99</td>
+                                <td><input type="radio" name="delivery" value="4.99" checked>$4.99</td>
                             </tr>
                             <tr>
                                 <td>Expedited:</td>
-                                <td><input type="radio" name="delivery">$19.99</td>
+                                <td><input type="radio" name="delivery" value="19.99">$19.99</td>
                             </tr>
                         </table>
                     </td>
                 </tr>
             </table>
-            <div>Gift Wrapping? $9.99<input type="checkbox" name="gift"></div>
+            <div>Gift Wrapping? $9.99<input type="checkbox" id="gift-wrapping" value="9.99" name="gift"></div>
             <div>
-                <input type="checkbox">Please insure my purchase!(10% of total before taxes)
+                <input type="checkbox" id="insure-purchase">Please insure my purchase!(10% of total before taxes)
             </div>
             <div>
-                <input type="checkbox"><span style="background-color: white">Please sign me up for your free Membership Rewards!</span>
+                <input type="checkbox" id="membership"><span style="background-color: white">Please sign me up for your free Membership Rewards!</span>
             </div>
         </div>
         <div class="billing-total">
@@ -75,33 +77,33 @@
             <table class="billing-table">
                 <tr>
                     <td>Delivery:</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="deliver-charge" disabled></td>
                 </tr>
                 <tr>
                     <td>Wrapping:</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="wrapping-charge" disabled></td>
                 </tr>
                 <tr>
                     <td>Insurance:</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="insure-charge" disabled></td>
                 </tr>
                 <tr>
                     <td>Sub-Total:</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="sub-total" disabled></td>
                 </tr>
                 <tr>
                     <td>Tax (13%):</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="tax" disabled></td>
                 </tr>
                 <tr>
                     <td>Total:</td>
-                    <td>$<input type="text" disabled></td>
+                    <td>$<input type="text" id="billing-total" disabled></td>
                 </tr>
             </table>
         </div>
         <div>
-            <button type="submit" onclick="submitForm()">Submit Query</button>
-            <button type="button" onclick="submitForm()">Recalculate</button>
+            <button type="submit" onclick="generateOrder()">Submit Query</button>
+            <button type="button" onclick="generateOrder()">Recalculate</button>
             <button type="reset">Reset</button>
         </div>
         <div id="order-status" class="order-status"></div>
