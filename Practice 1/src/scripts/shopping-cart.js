@@ -5,7 +5,7 @@ var PROMO_CODE = "BUY20";
 var promoApplied = false;
 
 function setValue(id, value) {
-    document.getElementById(id).value = value;
+    document.getElementById(id).value = value.toFixed(2);
 }
 
 function getNumberValue(id) {
@@ -26,7 +26,7 @@ function calculateItemsTotal() {
     var tvTotal = getNumberValue("samsung-tv-price");
     var audioTotal = getNumberValue("samsung-audio-price");
     itemsTotal = tvTotal + audioTotal;
-    setValue("items-total", itemsTotal)
+    setValue("items-total", itemsTotal);
 }
 
 function getDeliveryType() {
